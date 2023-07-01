@@ -18,6 +18,14 @@
     height: 90px;
     margin-top: 10px;
   }
+  .github {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.header a {
+  margin-left: auto;
 }
 
 .header h1 {
@@ -89,5 +97,10 @@
 
   .app-body {
     width: 100%;
+  }
+
+  .github {
+    margin-bottom: 20px;
+    margin-right: 10px;
   }
 }
