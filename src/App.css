@@ -1,0 +1,81 @@
+.app-body {
+  position: relative;
+  height: 100vh;
+  width: 95vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 10px;
+  margin-bottom: 10px;
+  .logo {
+    width: 90px;
+    height: 90px;
+    margin-top: 10px;
+  }
+}
+
+.header h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 48px;
+  background: linear-gradient(45deg, #ead6a5, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.content {
+  flex: 1;
+  flex-direction: column;
+  max-height: 75vh;
+  overflow: auto;
+  .el-card {
+    margin-top: 20px;
+  }
+}
+
+.el-input {
+  position: absolute !important ;
+  bottom: 50px;
+  overflow: hidden;
+  height: 50px;
+  --border-width: 2px;
+  --border-radius: 0.35rem;
+  --background-spread: 1000px;
+  position: relative;
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  padding: var(--border-width);
+}
+
+.el-input::after {
+  content: "";
+  position: absolute;
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    #00d1ff 0deg,
+    #ee27ff 106.88deg,
+    #205eff 206.25deg,
+    #00f0ff 286.87deg,
+    #00d1ff 360deg
+  );
+  top: calc(var(--background-spread) * -1);
+  right: calc(var(--background-spread) * -1);
+  bottom: calc(var(--background-spread) * -1);
+  left: calc(var(--background-spread) * -1);
+  z-index: -1;
+  animation: 3s rotate linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
